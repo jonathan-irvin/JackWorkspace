@@ -35,3 +35,45 @@ We will try that again.
 We were going to the wrong file I think. We neede to be going to hello_local_gcc_output, so now it works better.
 
 We found our text, and added stuff to it. now we are goign to run again as a test.
+
+Now we are goign to try a different example.
+
+Working from 
+http://stackoverflow.com/questions/6192807/using-openmp-to-calculate-the-value-of-pi
+
+We are going to try to run some new code.
+We added a little help from:
+https://computing.llnl.gov/tutorials/openMP/samples/C/omp_hello.c
+
+We added a bunch of code, now we will try to run in.
+The code had some problems.
+jeremy@jeremy-VirtualBox ~/workspace/JackWorkspace $ gcc -fopenmp piEstimate.c -lm -o piTest
+piEstimate.c: In function ‘main’:
+piEstimate.c:8:15: error: ‘CHUNKSIZE’ undeclared (first use in this function)
+   int chunk = CHUNKSIZE;                                                                                      
+               ^
+piEstimate.c:8:15: note: each undeclared identifier is reported only once for each function it appears in
+piEstimate.c:10:5: error: ‘count’ undeclared (first use in this function)
+     count=0;                                                                                                  
+     ^
+piEstimate.c:11:50: error: ‘i’ undeclared (first use in this function)
+ #pragma omp parallel shared(chunk,count) private(i)                                                           
+                                                  ^
+piEstimate.c:16:20: error: ‘niter’ undeclared (first use in this function)
+       for ( i=0; i<niter; i++) {                                                                              
+                    ^
+piEstimate.c:17:9: error: ‘x’ undeclared (first use in this function)
+         x = (double)rand()/RAND_MAX;                                                                          
+         ^
+piEstimate.c:18:9: error: ‘y’ undeclared (first use in this function)
+         y = (double)rand()/RAND_MAX;                                                                          
+         ^
+piEstimate.c:19:9: error: ‘z’ undeclared (first use in this function)
+         z = x*x+y*y;                                                                                          
+         ^
+piEstimate.c:24:3: error: ‘pi’ undeclared (first use in this function)
+   pi=(double)count/niter*4;                                                                                   
+   ^
+
+So we will go in and try to fix some stuff.
+I will leave this with Jack and go to lunch.
