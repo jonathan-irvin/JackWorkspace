@@ -1,0 +1,24 @@
+ JackWorkspace
+
+We are going to try to get some openMP code running for Jack.
+
+We are working off of the web site: 
+https://www.dartmouth.edu/~rc/classes/intro_openmp/hello_world_openmp.html
+
+We are going to do the hello world comments first.
+
+We use nano then the file name to open and close the text documents.
+
+Crtl x in nano will close a file.
+
+You have to right click to paste in code.
+
+We made a file called Hello_OpenMP.c and now we pasted the code in and we run it.
+
+
+We use the commands gcc -fopenmp Hello_OpenMP.c -lm -o test
+This command make the executable called test.
+
+Then we use the command 
+mv test.out hello 
+to rename the file from test to hello
