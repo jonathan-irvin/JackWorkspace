@@ -1,0 +1,12 @@
+We have added this line above the current text.
+
+Hello World from thread = 0
+Number of threads = 1
+Hello World from thread = 0
+Number of threads = 1
+
+We have added this line below the current text.
+Hello World from thread = 0
+Number of threads = 1
+
+And we have learned that the new text is added below when we use the >> function.
