@@ -47,6 +47,7 @@ https://computing.llnl.gov/tutorials/openMP/samples/C/omp_hello.c
 
 We added a bunch of code, now we will try to run in.
 The code had some problems.
+```
 jeremy@jeremy-VirtualBox ~/workspace/JackWorkspace $ gcc -fopenmp piEstimate.c -lm -o piTest
 piEstimate.c: In function ‘main’:
 piEstimate.c:8:15: error: ‘CHUNKSIZE’ undeclared (first use in this function)
@@ -74,6 +75,6 @@ piEstimate.c:19:9: error: ‘z’ undeclared (first use in this function)
 piEstimate.c:24:3: error: ‘pi’ undeclared (first use in this function)
    pi=(double)count/niter*4;                                                                                   
    ^
-
+```
 So we will go in and try to fix some stuff.
 I will leave this with Jack and go to lunch.
